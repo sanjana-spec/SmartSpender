@@ -1888,3 +1888,243 @@ align-items:center;
 .nav-logout:hover{
 color:var(--ember);
 }
+@media (max-width:1200px){
+
+.app{
+grid-template-columns:1fr;
+max-width:1000px;
+}
+
+.user-sidebar{
+position:relative;
+top:0;
+width:100%;
+order:-1;
+}
+
+.dashboard-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.restaurant-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.chart-split-view{
+flex-direction:column;
+align-items:center;
+gap:24px;
+}
+
+.chart-viz-container{
+width:180px;
+height:180px;
+}
+
+}
+@media (max-width:992px){
+
+.header-content{
+padding:0 18px;
+}
+
+.main-nav{
+gap:2px;
+}
+
+.main-nav a,
+.nav-item{
+font-size:13px;
+padding:6px 10px;
+}
+
+.dashboard-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.restaurant-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.wallet-stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.settings-grid{
+grid-template-columns:1fr;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.rec-content-grid{
+grid-template-columns:1fr;
+gap:14px;
+}
+
+.rec-mini-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+@media (max-width:768px){
+
+.header-content{
+height:54px;
+padding:0 14px;
+}
+
+.logo{
+font-size:19px;
+}
+
+.main-nav{
+display:none;
+}
+
+.profile-container{
+gap:10px;
+}
+
+.dashboard-grid{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.restaurant-grid{
+grid-template-columns:1fr;
+}
+
+.wallet-stats-grid{
+grid-template-columns:1fr;
+}
+
+.user-dashboard{
+grid-template-columns:1fr 1fr;
+}
+
+.chart-viewport{
+padding:16px;
+}
+
+.chart-viz-container{
+width:160px;
+height:160px;
+}
+
+.chart-split-view{
+gap:18px;
+}
+
+.rec-stats-section,
+.rec-action-section{
+padding:20px 18px;
+}
+
+.card,
+.finance-card{
+padding:18px 16px;
+}
+
+.form-card{
+padding:20px 16px;
+}
+
+.page-container{
+margin:18px 12px;
+padding:20px 16px;
+}
+
+}
+@media (max-width:768px){
+
+.header-content{
+height:54px;
+padding:0 14px;
+}
+
+.logo{
+font-size:19px;
+}
+
+.main-nav{
+display:none;
+}
+
+.profile-container{
+gap:10px;
+}
+
+.dashboard-grid{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.restaurant-grid{
+grid-template-columns:1fr;
+}
+
+.wallet-stats-grid{
+grid-template-columns:1fr;
+}
+
+.user-dashboard{
+grid-template-columns:1fr 1fr;
+}
+
+.chart-viewport{
+padding:16px;
+}
+
+.chart-viz-container{
+width:160px;
+height:160px;
+}
+
+.chart-split-view{
+gap:18px;
+}
+
+.rec-stats-section,
+.rec-action-section{
+padding:20px 18px;
+}
+
+.card,
+.finance-card{
+padding:18px 16px;
+}
+
+.form-card{
+padding:20px 16px;
+}
+
+.page-container{
+margin:18px 12px;
+padding:20px 16px;
+}
+
+}
+@media (max-width:520px){
+
+.center-screen .card{
+max-width:92%;
+padding:36px 26px;
+}
+
+.center-screen h2{
+font-size:24px;
+}
+
+.login-logo{
+width:46px;
+height:46px;
+font-size:22px;
+}
+
+}
+img{
+max-width:100%;
+height:auto;
+}

@@ -21,7 +21,7 @@ function Login({ setUser }) {
 
     try {
 
-      const res = await fetch("https://smartspender-itbv.onrender.com/api",{
+      const res = await fetch("https://smartspender-itbv.onrender.com/api/auth/login",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -67,7 +67,7 @@ function Login({ setUser }) {
 
     try{
 
-      const res = await fetch("https://smartspender-itbv.onrender.com/api",{
+      const res = await fetch("https://smartspender-itbv.onrender.com/api/auth/register",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"

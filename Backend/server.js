@@ -9,9 +9,7 @@ const transactionRoutes = require("./routes/transactionRoutes");
 
 const app = express();
 
-app.use(cors({
-  origin: "https://smart-spender-five.vercel.app"
-}));
+app.use(cors()); // easiest fix for now
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
@@ -21,6 +19,8 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/api/auth", authRoutes);
 app.use("/api/transactions", transactionRoutes);
 
-app.listen(5000,()=>{
-  console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, ()=>{
+  console.log(`Server running on port ${PORT}`);
 });

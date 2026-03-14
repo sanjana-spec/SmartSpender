@@ -1,7 +1,7 @@
 import React from "react";
 
 function UserDashboard({ user, transactions }) {
-
+  const walletFunds = Number(localStorage.getItem("ss_wallet") || 0);
   const income = transactions
     .filter(t => t.amount > 0)
     .reduce((sum, t) => sum + t.amount, 0);
@@ -10,7 +10,7 @@ function UserDashboard({ user, transactions }) {
     .filter(t => t.amount < 0)
     .reduce((sum, t) => sum + t.amount, 0);
 
-  const balance = income + expenses;
+  const balance = walletFunds + income + expenses;
   const savings = balance * 0.2;
 
   return (

@@ -591,179 +591,35 @@
 }
 
 @media (max-width:640px) {
-  .hero-headline { font-size:2.8rem; }
+  .hero-section { padding:100px 20px 48px; }
+  .hero-headline { font-size:2.6rem; }
+  .hero-sub { font-size:0.92rem; }
+  .hero-actions { flex-direction:column; align-items:center; gap:14px; }
+  .cta-primary { width:100%; justify-content:center; }
+
   .stats-band    { grid-template-columns:1fr 1fr; }
   .stat-item     { padding:28px 16px; }
+  .stat-val      { font-size:1.8rem; }
+
+  .pain-section, .features-section, .collage-section,
+  .how-section, .reviews-section, .final-cta-section { padding:60px 20px; }
+
   .collage-grid  { grid-template-columns:1fr; }
-  .lp-section-title { font-size:1.9rem; margin-bottom:40px; }
-}
-@media (max-width:1024px){
+  .lp-section-title { font-size:1.8rem; margin-bottom:36px; }
 
-  .landing-nav{
-    padding:16px 30px;
-  }
+  .feat-photo-wrap { height:260px; }
+  .feat-overlay-ui { display:none; }
 
-  .hero-section{
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:40px;
-    padding:120px 40px 80px;
-  }
+  .reviews-grid { grid-template-columns:1fr; }
+  .review-card  { padding:20px; }
 
-  .hero-sub{
-    max-width:600px;
-    margin:auto;
-  }
+  .landing-footer { padding:20px; gap:12px; }
+  .footer-links { gap:16px; }
 
-  .hero-actions{
-    justify-content:center;
-  }
+  .cta-headline { font-size:2rem; }
+  .cta-big { width:100%; justify-content:center; }
 
-  .feature-pills{
-    justify-content:center;
-  }
-
-  .hero-visual{
-    display:none;
-  }
-
-  .pain-cards{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .stats-band{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .feat-row{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .feat-photo-wrap{
-    height:320px;
-  }
-
-  .reviews-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .collage-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-@media (max-width:768px){
-
-  .landing-nav{
-    padding:14px 20px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .hero-section{
-    padding:110px 24px 60px;
-  }
-
-  .hero-headline{
-    font-size:2.6rem;
-  }
-
-  .hero-sub{
-    font-size:0.95rem;
-  }
-
-  .cta-primary{
-    padding:12px 20px;
-    font-size:0.9rem;
-  }
-
-  .pain-cards{
-    grid-template-columns:1fr;
-  }
-
-  .stats-band{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .stat-val{
-    font-size:1.8rem;
-  }
-
-  .feat-row{
-    margin-bottom:70px;
-  }
-
-  .feat-photo-wrap{
-    height:260px;
-  }
-
-  .reviews-grid{
-    grid-template-columns:1fr;
-  }
-
-  .collage-grid{
-    grid-template-columns:1fr;
-  }
-
-  .collage-tall{
-    display:none;
-  }
-
-  .features-section,
-  .pain-section,
-  .collage-section,
-  .how-section,
-  .reviews-section,
-  .final-cta-section{
-    padding:70px 24px;
-  }
-
-  .landing-footer{
-    flex-direction:column;
-    gap:12px;
-    text-align:center;
-    padding:20px;
-  }
-
-}
-@media (max-width:480px){
-
-  .hero-headline{
-    font-size:2.2rem;
-  }
-
-  .hero-actions{
-    flex-direction:column;
-    gap:14px;
-  }
-
-  .cta-primary{
-    width:100%;
-    justify-content:center;
-  }
-
-  .feature-pill{
-    font-size:0.75rem;
-    padding:6px 10px;
-  }
-
-  .stat-val{
-    font-size:1.6rem;
-  }
-
-  .step-card{
-    padding:28px 18px;
-  }
-
-  .review-card{
-    padding:20px;
-  }
-
-}
-img{
-  max-width:100%;
-  height:auto;
+  .landing-nav { padding:14px 20px; }
+  .nav-blur    { padding:10px 20px; }
+  .nav-cta     { padding:8px 16px; font-size:0.82rem; }
 }

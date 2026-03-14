@@ -24,8 +24,8 @@ import "./styles/landing.css";
 function App() {
   const [user, setUser] = useState(localStorage.getItem("userId"));
   const [transactions, setTransactions] = useState([]);
-  // New state: controls whether we show landing or login
   const [showLogin, setShowLogin] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
     const loadTransactions = async () => {
@@ -77,17 +77,34 @@ function App() {
               <h1 className="logo">SmartSpend</h1>
               <div className="header-right">
                 <nav className="main-nav">
-                  <Link to="/">Dashboard</Link>
-                  <Link to="/wallet">Wallet</Link>
-                  <Link to="/settings">Settings</Link>
-                  <Link to="/contact">Help</Link>
-                  <button className="nav-logout" onClick={logout}>
-                Logout
-              </button>
+                  <Link to="/" onClick={() => setMobileNavOpen(false)}>Dashboard</Link>
+                  <Link to="/wallet" onClick={() => setMobileNavOpen(false)}>Wallet</Link>
+                  <Link to="/settings" onClick={() => setMobileNavOpen(false)}>Settings</Link>
+                  <Link to="/contact" onClick={() => setMobileNavOpen(false)}>Help</Link>
+                  <button className="nav-logout" onClick={logout}>Logout</button>
                 </nav>
                 <ProfileMenu user={user} balance={balance} setUser={setUser} />
+                <button
+                  className="hamburger-btn"
+                  onClick={() => setMobileNavOpen(o => !o)}
+                  aria-label="Toggle navigation"
+                >
+                  <span className={`ham-line ${mobileNavOpen ? "open" : ""}`} />
+                  <span className={`ham-line ${mobileNavOpen ? "open" : ""}`} />
+                  <span className={`ham-line ${mobileNavOpen ? "open" : ""}`} />
+                </button>
               </div>
             </div>
+            {/* Mobile nav drawer */}
+            {mobileNavOpen && (
+              <nav className="mobile-nav-drawer">
+                <Link to="/" onClick={() => setMobileNavOpen(false)}>📊 Dashboard</Link>
+                <Link to="/wallet" onClick={() => setMobileNavOpen(false)}>💳 Wallet</Link>
+                <Link to="/settings" onClick={() => setMobileNavOpen(false)}>⚙️ Settings</Link>
+                <Link to="/contact" onClick={() => setMobileNavOpen(false)}>❓ Help</Link>
+                <button className="nav-logout mobile-logout" onClick={() => { logout(); setMobileNavOpen(false); }}>🚪 Logout</button>
+              </nav>
+            )}
           </header>
 
           <Routes>
@@ -107,7 +124,7 @@ function App() {
                     <TransactionForm addTransaction={handleAdd} />
                   </section>
 
-                  <section className="feed-section dashboard-grid">
+                  <section className="feed-section">
                     <BudgetSummary transactions={transactions} />
                   </section>
 
